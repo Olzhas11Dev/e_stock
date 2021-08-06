@@ -1,12 +1,16 @@
 .itemsCard_container {
-  cursor: pointer;
-  width: 100%;
+  display: flex;
+}
+
+.item_right {
+  width: 85%;
   margin: 40px auto;
   display: flex;
   flex-wrap: wrap;
 }
 .card {
-  width: 370px;
+  cursor: pointer;
+  width: 32%;
   margin: 4px auto;
   margin-bottom: 50px;
 }
@@ -34,4 +38,46 @@
 
 .card_price {
   margin-top: 10px;
+}
+
+/* ITEM LEFT */
+
+.item_left {
+  width: 15%;
+  margin: 10px auto;
+}
+
+.items_left_btns {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  border-bottom: 1px grey solid;
+}
+
+.items_left_btns h4 {
+  margin-bottom: 20px;
+}
+
+.left_btns_row {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.items_left_gender {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  border-bottom: 1px grey solid;
+}
+
+.items_left_gender h4 {
+  margin-bottom: 20px;
 }
