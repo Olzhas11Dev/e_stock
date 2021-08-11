@@ -1,19 +1,20 @@
 import React from 'react'
 import { FiShoppingCart } from 'react-icons/fi'
 import '../style/navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
         <div className='navbar_container' >
-            <div>FunStock.</div>
+            <Link to="/" >FunStock.</Link>
             <div className='navbar_center' >
-                <div>Men</div>
-                <div>Women</div>
-                <div>Accessoires</div>
+                <Link to="/men" >Men</Link>
+                <Link to="/women" >Women</Link>
+                <Link to="/accessoires"> Accessoires</Link>   
             </div>
-            <div>
+            <Link to = "/cart" >
                 <FiShoppingCart/>
-            </div>
+            </Link>
         </div>
     )
 }

@@ -148,7 +148,7 @@ const dataItem = [
         "id":16,
         "title": "LED Shoes",
         "description": "Three shoes with LED lights on the sole, one red, one white, and one black.",
-        "price":23,
+        "price":78,
         "image": './image/17_LED-shoes.jpg',
         "gender_description": "Shoes",
         "gender": 'Unisex'
