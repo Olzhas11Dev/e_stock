@@ -23,18 +23,15 @@ function ItemsCard(props) {
 
     function filterTrue(){
         let trueStatus = check.filter(e => e.status)     //Create array only for true status  e=> e.status===true As e.status is boolean not can cut it 
-         console.log(trueStatus)
          let arrayData = dataItem.filter((element)=>{
              if(trueStatus.length===1){
                 if( element.price>trueStatus[0].minPrice && element.price<trueStatus[0].maxPrice){
-                    console.log(element.price)
                     return element
                 }
              } 
              if(trueStatus.length===2){
                 if (( element.price>trueStatus[0].minPrice && element.price<trueStatus[0].maxPrice)||
                     ( element.price>trueStatus[1].minPrice && element.price<trueStatus[1].maxPrice)){
-                    console.log(element.price)
                     return element
                 }
              } 
@@ -42,7 +39,6 @@ function ItemsCard(props) {
                 if (( element.price>trueStatus[0].minPrice && element.price<trueStatus[0].maxPrice)||
                     ( element.price>trueStatus[1].minPrice && element.price<trueStatus[1].maxPrice)||
                     ( element.price>trueStatus[2].minPrice && element.price<trueStatus[2].maxPrice)){
-                    console.log(element.price)
                     return element
                 }
              } 
@@ -53,7 +49,6 @@ function ItemsCard(props) {
             setDataMod(dataItem)
          }
     }
-   console.log(props)
     
     return (
         <div className ='itemsCard_container'>

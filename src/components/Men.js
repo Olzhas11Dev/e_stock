@@ -21,8 +21,7 @@ function Men(props) {
     
     function filterTrueStatus(){
         let trueOnlyArr = checkBtnStatus.filter(item=>item.status)   
-        console.log(trueOnlyArr)
-
+      
        let filteredArray =  menStock.filter(function(element){
             if(trueOnlyArr.length===1){
                 if(element.price>trueOnlyArr[0].minPrice && element.price<trueOnlyArr[0].maxPrice ){

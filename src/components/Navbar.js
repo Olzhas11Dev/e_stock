@@ -3,7 +3,8 @@ import { FiShoppingCart } from 'react-icons/fi'
 import '../style/navbar.css'
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({bagList}) {
+
     return (
         <div className='navbar_container' >
             <Link to="/" >FunStock.</Link>
@@ -12,9 +13,7 @@ function Navbar() {
                 <Link to="/women" >Women</Link>
                 <Link to="/accessoires"> Accessoires</Link>   
             </div>
-            <Link to = "/cart" >
-                <FiShoppingCart/>
-            </Link>
+            <Link to = "/cart" >{bagList.length}<FiShoppingCart/></Link>
         </div>
     )
 }

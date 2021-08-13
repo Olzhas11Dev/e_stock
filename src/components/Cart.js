@@ -1,9 +1,14 @@
 import React from 'react'
 
-function Cart() {
+function Cart({bagList}) {
+    console.log(bagList)
     return (
         <div>
-            Cart page
+            {bagList.map((element)=>{
+                return (
+                    <div key={element.id} >{element.price}</div>
+                )
+            })}
         </div>
     )
 }

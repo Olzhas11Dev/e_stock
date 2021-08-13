@@ -11,34 +11,29 @@ import Products from './components/Products'
 
 function App() {
 
-const[listItems,setListItems] = useState([])
-const[oneItem,setOneItem] = useState()
 
-function addToList (some){
-  // setListItems([...listItems,some])
-  setOneItem(some)
+const[oneItem,setOneItem] = useState()
+const[bagList,setBagList] = useState([])
+
+function addToList (someItem){
+  setOneItem(someItem)
 }
 
+function putToBag (chosenItem){          ///[{},{}]
+  setBagList([...bagList,chosenItem])
+}
 
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar  bagList={bagList}/>
         <Switch>
             <Route exact path="/" component={()=><ItemsCard addToList={addToList}/>}  />
-            <Route path="/men"    component={()=><Men addToList={addToList}  
-                setListItems={setListItems}
-                listItems={listItems} />} />  
-            <Route path="/women">
-                < Women/>
-            </Route>
-            <Route path = "/accessoires">
-                <Accessoires/>
-            </Route>
-            <Route path="/cart" >
-                <Cart/>
-            </Route>
-            <Route path="/product" component = {()=> <Products oneItem={oneItem}/>}/>
+            <Route path="/men"    component={()=><Men addToList={addToList}   />} />  
+            <Route path="/women" component={()=>< Women/> }/>
+            <Route path = "/accessoires" component={()=><Accessoires/>}/>
+            <Route path="/cart" component={()=><Cart bagList={bagList}/>}/>
+            <Route path="/product" component = {()=> <Products  putToBag={putToBag} oneItem={oneItem}/>} />
         </Switch>
       </div>
     </Router>
