@@ -1,21 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function OneCard({items}) {
+function OneCard(props) {
+   
     return (
         <div className='card'>
-            <img src={items.image} alt=""/>
-            <div className='card_content' >
-                <h4 className='itemsCard_title' >
-                    {items.title}
-                </h4>
-                <h4 className='itemsCard_gender_descrip' >
-                    {items.gender_description}
-                </h4>
-                <div className='card_price' >
-                    $ {items.price}
-                </div>
-        </div> 
-    </div>
+            <Link to = "/product"  onClick={()=> props.addToList(props.items)}>
+                <img src={props.items.image} alt=""/>
+            </Link>
+                <div className='card_content' >
+                    <h4 className='itemsCard_title' >
+                        {props.items.title}
+                    </h4>
+                    <h4 className='itemsCard_gender_descrip' >
+                        {props.items.gender_description}
+                    </h4>
+                    <div className='card_price' >
+                        $ {props.items.price}
+                    </div>
+              </div> 
+          
+        </div>
     )
 }
 

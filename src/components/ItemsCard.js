@@ -2,16 +2,11 @@ import React,{ useState } from 'react'
 import dataItem from '../dataItem'
 import '../style/itemsCards.css'
 import OneCard from './OneCard'
+import dataBtns from '../dataBtns'
 
-let btnsStatus = [
-    {name:'Under $30', id: 0, status: false ,minPrice:0 ,maxPrice:30},
-    {name:'$30-$70',   id: 1, status: false ,minPrice:30 ,maxPrice:70},
-    {name:'$70-$90',   id: 2, status: false ,minPrice:70 ,maxPrice:90},
-    {name:'Over $90',  id: 3, status: false ,minPrice:90 ,maxPrice:1000000}
-]
-function ItemsCard() {
+function ItemsCard(props) {
     const[dataMod,setDataMod] = useState(dataItem)
-    const[check,setCheck] = useState(btnsStatus)
+    const[check,setCheck] = useState(dataBtns)
 
 ///////// Change status    
 
@@ -53,17 +48,19 @@ function ItemsCard() {
              } 
          })
          setDataMod(arrayData)
+
          if(arrayData.length===0){
-             setDataMod(dataItem)
+            setDataMod(dataItem)
          }
     }
-   
+   console.log(props)
+    
     return (
         <div className ='itemsCard_container'>
             <div className='item_left' >
                 <div className='items_left_btns' >
                     <h4>Shop by price</h4>
-                    {btnsStatus.map(function(item){
+                    {dataBtns.map(function(item){
                         return (
                             <div  key={item.id} className='left_btns_row' >
                                 <input type="checkbox" name='btns' onChange={(e)=>changeStatus(e,item)} />
@@ -77,7 +74,7 @@ function ItemsCard() {
             <div className='item_right' >
                 {dataMod.map(function(e){
                     return (
-                    <OneCard items={e} key={e.id}/>
+                    <OneCard addToList={props.addToList} items={e} key={e.id}/>
                     )
                 })} 
                 </div>

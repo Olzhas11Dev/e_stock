@@ -1,18 +1,18 @@
 const dataItem = [
     {
         "id":0,
-        "title": 'Blue T-Shirt',
-        "description": 'A blank blue t-shirt on a hanger ready for printing possibilities.',
-        "price":10,
-        "image": './image/1_blue-t-shirt.jpg',
-        "gender_description": "Men's T-Shirt",
-        "gender": 'Man'
+        "title": 'White Summer Dress',
+        "description": 'We are zoomed in on the top half of a sweet white sundress with small black polka dots and a flowy top.',
+        "price":32,
+        "image": './image/1_white-summer-dress.jpg',
+        "gender_description": "Women's dresses",
+        "gender": 'Women'
     },
     {
         "id":1,
         "title": 'Watches In Black',
         "description": 'His black and white classic watch set in a mirror style image.',
-        "price":15,
+        "price":40,
         "image": './image/2_watches-in-black-white.jpg',
         "gender_description": "Men's Watches",
         "gender": 'Man'
@@ -66,7 +66,7 @@ const dataItem = [
         "id":7,
         "title": "Pair Of Navy Blue Skate Shoes",
         "description": 'A pair of navy blue skate shoes on a dark wooden platform in front of a white painted brick wall.',
-        "price":28,
+        "price":75,
         "image": './image/8_blue-skate-shoes.jpg',
         "gender_description": "Man's shoes",
         "gender": 'Man'
@@ -161,7 +161,34 @@ const dataItem = [
         "image": './image/18_wood-leather-watches.jpg',
         "gender_description": "Men's Watches",
         "gender": 'Man'
+    } ,
+    {
+        "id":18,
+        "title": 'Blue T-Shirt',
+        "description": 'A blank blue t-shirt on a hanger ready for printing possibilities.',
+        "price":10,
+        "image": './image/19_blue-t-shirt.jpg',
+        "gender_description": "Men's T-Shirt",
+        "gender": 'Man'
     },
+    {
+        "id":19,
+        "title": 'Red And Black Fall Shirt',
+        "description": "A red and black plaid flannel men's shirt on a model.",
+        "price":42,
+        "image": './image/20_red-and-black-fall-shirt.jpg',
+        "gender_description": "Men's Fall Shirt",
+        "gender": 'Man'
+    },
+    {
+        "id":20,
+        "title": 'Jacket In Blues',
+        "description": "View of the back of a men's blue windbreaker.",
+        "price":72,
+        "image": './image/21_jacket-in-blues.jpg',
+        "gender_description": "Men's Fall Shirt",
+        "gender": 'Man'
+    }
 
 ]
 
