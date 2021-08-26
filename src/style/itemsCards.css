@@ -8,11 +8,13 @@
   display: flex;
   flex-wrap: wrap;
 }
-.card {
+
+.items_links {
   cursor: pointer;
-  width: 32%;
-  margin: 4px auto;
+  width: 30%;
+  text-decoration: none;
   margin-bottom: 50px;
+  margin-right: 15px;
 }
 
 .card img {
@@ -37,6 +39,7 @@
 }
 
 .card_price {
+  color: black;
   margin-top: 10px;
 }
 

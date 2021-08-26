@@ -30,7 +30,7 @@ const dataItem = [
         "id":3,
         "title": "Women's Boho ",
         "description": 'A full angled shot of a short, boho paisley print dress with thick white lace trim, in white, blue and red.',
-        "price":60,
+        "price":80,
         "image": './image/4_womens-boho-dress.jpg',
         "gender_description": "Women's dresses",
         "gender": 'Women'
@@ -93,7 +93,7 @@ const dataItem = [
         "id":10,
         "title": "Lace Top Detail",
         "description": "This is close-up on a woman's right shoulder, bearing a white lace, detailed short sleeve blouse. A beautiful pattern with transparent sleeves and section across the collar bones..",
-        "price":30,
+        "price":130,
         "image": './image/11_lace-top-detail.jpg',
         "gender_description": "Women's dresses",
         "gender": 'Women'

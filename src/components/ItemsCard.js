@@ -3,6 +3,7 @@ import dataItem from '../dataItem'
 import '../style/itemsCards.css'
 import OneCard from './OneCard'
 import dataBtns from '../dataBtns'
+import { Link } from 'react-router-dom'
 
 function ItemsCard(props) {
     const[dataMod,setDataMod] = useState(dataItem)
@@ -69,7 +70,9 @@ function ItemsCard(props) {
             <div className='item_right' >
                 {dataMod.map(function(e){
                     return (
-                    <OneCard addToList={props.addToList} items={e} key={e.id}/>
+                    <Link className='items_links' key={e.id} to={`/product/${e.id}`}>
+                        <OneCard items={e} />
+                    </Link>
                     )
                 })} 
                 </div>

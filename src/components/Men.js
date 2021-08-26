@@ -2,6 +2,7 @@ import React,{ useState } from 'react'
 import dataItem from '../dataItem'
 import OneCard from './OneCard'
 import dataBtns from '../dataBtns'
+import { Link } from 'react-router-dom'
 
 function Men(props) {
     const menStock = dataItem.filter(elem=>elem.gender==='Man')
@@ -69,7 +70,9 @@ function Men(props) {
         <div className='item_right' >
             {menData.map(function(e){
                 return (
-                <OneCard addToList={props.addToList}  items={e} key={e.id}/>
+                <Link className='items_links' key={e.id} to={`/product/${e.id}`}>
+                    <OneCard  items={e} key={e.id}/>
+                </Link>
                 )
             })} 
             </div>

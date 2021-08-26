@@ -1,23 +1,28 @@
-import React from 'react'
+import dataItem from '../dataItem'
 import '../style/products.css'
 
-function Products({oneItem,putToBag}) {
+function Products(props) {
+
+    let currentId = props.match.params.id  
+    let getItemData = dataItem[currentId]
+    
     return (
         <div className="products" >
             <div className='products_left'>
-                <img src={oneItem ? oneItem.image:null} alt=""/>
+                <img src= {`../../${getItemData.image}`} alt=""/>
             </div>
             <div className='products_right'>
-                 <h1>{oneItem ? oneItem.title:null} </h1>
+                 <h1>{getItemData.title}</h1>
                  <div className="products_price" >
-                     <div>Price</div>
-                     <div> $ {oneItem ? oneItem.price : null}</div>
+                     <div>Price </div>
+                     <div> $ {getItemData.price}</div>
                  </div>
                  <h3>Description</h3>
             <div className="products_description" >
-                 {oneItem ? oneItem.description : null}
+                {getItemData.description}
             </div>
-                <button onClick={()=> putToBag(oneItem)} >Add to Bag</button>
+                
+                <button onClick={()=>props.putToBag(getItemData)}>Add to Bag</button>
             </div>
         </div>
     )

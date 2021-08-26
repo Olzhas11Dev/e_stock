@@ -5,9 +5,7 @@ function OneCard(props) {
    
     return (
         <div className='card'>
-            <Link to = "/product"  onClick={()=> props.addToList(props.items)}>
-                <img src={props.items.image} alt=""/>
-            </Link>
+            <img src={props.items.image} alt=""/>
                 <div className='card_content' >
                     <h4 className='itemsCard_title' >
                         {props.items.title}
