@@ -24,7 +24,6 @@ function App() {
     setBagList(bagList.filter ( elem  => elem.id!==item.id))
  }   
 
-
   return (
     <Router>
       <div className="App">
